@@ -1,0 +1,18 @@
+{
+  "name": "wicked_wines_2_vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.2.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.13.0",
+    "country-region-data": "^2.7.0"
+  }
+}

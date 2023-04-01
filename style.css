@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  margin: 1rem 0 0rem;
+}
+
+form {
+  margin: 0 1.5rem;
+
+  /* accent-color: rgb(255, 78, 231); */
+}
+.add_wine {
+  display: grid;
+
+  gap: 2rem;
+  max-width: 300px;
+}
+
+.form_block {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.wine_list {
+  margin: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+input:invalid:not(:focus-visible, :placeholder-shown) {
+  border: red 1px solid;
+}
+
+input:invalid:not(:placeholder-shown, :focus-visible) ~ .year_instruction {
+  opacity: 1;
+}
+
+input:valid {
+  border: green 1px solid;
+}
+
+.year_instruction {
+  opacity: 0;
+  color: red;
+}
+
+fieldset[name="origin"] {
+  display: grid;
+  gap: 0.3rem;
+}

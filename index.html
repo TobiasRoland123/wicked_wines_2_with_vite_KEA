@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!-- <div id="app"></div> -->
+    <main>
+      <form action="add_wine" class="add_wine">
+        <h1>Add a wine</h1>
+
+        <div class="form_block">
+          <label for="wine_name">Name</label>
+          <input type="text" name="wine_name" id="wine_name"  placeholder="e.g. Daddy's wine" required />
+        </div>
+
+        <div class="form_block">
+          <label for="wine_year">Year</label>
+         
+          <input type="number" name="wine_year" id="wine_year" min="1000" max="9999"  placeholder="e.g. 2021" required />
+          <small class="year_instruction">Year should be four numbers e.g. "2002"</small>
+        </div>
+        <div class="form_block">
+          <fieldset class="wine_type">
+            <legend for="wine_type" 
+            >Type</legend>
+
+            <div class="input_and_label">
+              <label for="red_wine"
+                >Red
+                <input type="radio" name="wine_type" id="red_wine" value="red" />
+              </label>
+            </div>
+
+            <div class="input_and_label">
+              <label for="white_wine"
+                >White
+                <input type="radio" name="wine_type" id="white_wine" value="white" />
+              </label>
+            </div>
+
+            <div class="input_and_label">
+              <label for="rose_wine"
+                >Rose
+                <input type="radio" name="wine_type" id="rose_wine" value="rose" />
+              </label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="form_block">
+          <fieldset>
+            <legend>Is it good?</legend>
+            <div class="input_and_label">
+              <label for="good"></label>
+              <input type="checkbox" name="is_good" id="good" value="true" />
+            </div>
+            
+          </fieldset>
+        </div>
+
+        <div class="form_block">
+
+          <label for="wines_grapes">Grapes (one per line)</label>
+          <textarea name="wine_grapes" id="wines_grapes"></textarea>
+
+          <!-- <fieldset>
+            <legend>Grapes</legend>
+
+            <div class="input_and_label">
+              <input type="checkbox" name="wine_grapes" id="merlot" value="merlot" /> <label for="merlot">Merlot</label>
+            </div>
+            <div class="input_and_label">
+              <input type="checkbox" name="wine_grapes" id="pinot" value="pinot" /> <label for="pinot">Pinot</label>
+            </div>
+            <div class="input_and_label">
+              <input type="checkbox" name="wine_grapes" id="chardonnay" value="chardonnay" />
+              <label for="chardonnay">Chardonnay</label>
+            </div>
+            <div class="input_and_label">
+              <input type="checkbox" name="wine_grapes" id="cabernet" value="cabernet" /> <label for="cabernet">Cabernet</label>
+            </div>
+          </fieldset> -->
+        </div>
+
+        <div class="form_block">
+          <fieldset name="origin">
+            <legend>Origin</legend>
+            <label for="wine_country">country</label>
+          <select name="wine_country" id="country"></select>
+          <label for="wine_region">Region</label>
+          <select name="wine_region" id="region"></select>
+          </fieldset>
+        </div>
+        <!-- <input type="text" placeholder="not to be filled out" required> -->
+
+        <button type="submit" data-action="submit">Add wine</button>
+      </form>
+      <article class="wine_list"><h2>List of wines</h2></article>
+    </main>
+    <template id="wine_template">
+      <article>
+        <h2 class="wine_name">"wine name"</h2>
+      <p class="wine_origin"></p>
+      <p class="is_good"></p>
+      <ul></ul>
+
+      <div class="wine_btns">
+        <button class="update">Update</button>
+        <button class="delete">Delete</button>
+      </article>
+      
+      </div>
+    </template>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
